@@ -11,6 +11,7 @@ pipeline {
                 echo "Cleaning up old results..."
                 sh "rm -rf ${RESULTS_DIR}"
                 sh "mkdir -p ${RESULTS_DIR}"
+				ls -R
             }
         }
 
