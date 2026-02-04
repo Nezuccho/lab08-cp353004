@@ -6,6 +6,14 @@ pipeline {
     }
 
     stages {
+	
+		stage('Checkout Source Code') {
+            steps {
+                checkout scm
+                sh "ls -R"
+            }
+        }
+	
         stage('Cleanup') {
             steps {
                 echo "Cleaning up old results..."
